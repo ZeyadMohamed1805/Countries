@@ -1,2 +1,14 @@
 @import "../Variables/Variables";
 @import "../Mixins/Mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: $small-font-size;
+}

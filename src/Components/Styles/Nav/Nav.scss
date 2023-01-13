@@ -1,0 +1,20 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+#nav {
+    @include flex(row, center, center, auto);
+    box-shadow: 0 0 5px $dark-grey;
+
+    #nav-container {
+        @include flex(row, space-between, center, auto);
+        width: 90%;
+        padding: 1rem 0;
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-weight: $font-weight-medium;
+            cursor: pointer;
+        }
+    }
+}
