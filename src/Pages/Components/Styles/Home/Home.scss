@@ -1,0 +1,12 @@
+@import "../Variables/Variables";
+@import "../Mixins/Mixins";
+
+#home {
+    @include flex(row, center, center, auto);
+
+    #home-container {
+        @include flex(column, auto, auto, auto);
+        width: 90%;
+        padding: 2rem 0;
+    }
+}

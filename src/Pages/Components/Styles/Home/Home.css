@@ -1,0 +1,16 @@
+#home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: auto;
+}
+#home #home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: auto;
+  width: 90%;
+  padding: 2rem 0;
+}/*# sourceMappingURL=Home.css.map */
