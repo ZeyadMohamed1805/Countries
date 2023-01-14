@@ -8,8 +8,8 @@ export const Filter = () => {
         <input id="search" type="search" placeholder="Search for a country..." />
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
-      <select id="select">
-        <option value="none" selected disabled hidden>Filter by Region</option>
+      <select id="select" defaultValue="none">
+        <option value="none" disabled hidden>Filter by Region</option>
         <option value="Africa">Africa</option>
         <option value="America">America</option>
         <option value="Asia">Asia</option>
