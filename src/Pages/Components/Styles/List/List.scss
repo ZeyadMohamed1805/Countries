@@ -1,2 +1,33 @@
 @import "../Variables/Variables";
 @import "../Mixins/Mixins";
+
+#list {
+    #list-container {
+        @include grid(repeat(4, 1fr), auto, 4rem);
+    }
+}
+
+@media (max-width: 1200px) {
+    #list {
+        #list-container {
+            @include grid(repeat(3, 1fr), auto, 4rem);
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #list {
+        #list-container {
+            @include grid(repeat(2, 1fr), auto, 4rem);
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #list {
+        #list-container {
+            @include grid(minmax(200px, 300px), auto, 4rem);
+            justify-content: center;
+        }
+    }
+}

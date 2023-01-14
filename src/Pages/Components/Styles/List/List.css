@@ -1,1 +1,32 @@
-/*# sourceMappingURL=List.css.map */
+#list #list-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 4rem;
+}
+
+@media (max-width: 1200px) {
+  #list #list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 4rem;
+  }
+}
+@media (max-width: 800px) {
+  #list #list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  #list #list-container {
+    display: grid;
+    grid-template-columns: minmax(200px, 300px);
+    grid-template-rows: auto;
+    gap: 4rem;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=List.css.map */

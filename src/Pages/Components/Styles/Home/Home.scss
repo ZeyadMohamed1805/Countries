@@ -3,9 +3,10 @@
 
 #home {
     @include flex(row, center, center, auto);
+    background-color: $light-grey;
 
     #home-container {
-        @include flex(column, auto, auto, auto);
+        @include flex(column, auto, auto, 2rem);
         width: 90%;
         padding: 2rem 0;
     }

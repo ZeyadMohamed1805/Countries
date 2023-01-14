@@ -4,13 +4,14 @@
   justify-content: center;
   align-items: center;
   gap: auto;
+  background-color: hsl(0deg, 0%, 98%);
 }
 #home #home-container {
   display: flex;
   flex-direction: column;
   justify-content: auto;
   align-items: auto;
-  gap: auto;
+  gap: 2rem;
   width: 90%;
   padding: 2rem 0;
 }/*# sourceMappingURL=Home.css.map */

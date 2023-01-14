@@ -1,2 +1,33 @@
 @import "../Variables/Variables";
 @import "../Mixins/Mixins";
+
+#country {
+    background-color: $white;
+    box-shadow: 0 0 5px $dark-grey;
+    border-radius: 5px;
+    cursor: pointer;
+
+    img {
+        height: 150px;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #country-body {
+        padding: 1rem;
+
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        #country-info {
+            @include flex(column, auto, auto, 0.25rem);
+
+            h4 {
+                span {
+                    font-weight: $font-weight-light;
+                }
+            }
+        }
+    }
+}

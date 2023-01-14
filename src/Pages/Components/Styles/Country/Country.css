@@ -1,1 +1,27 @@
-/*# sourceMappingURL=Country.css.map */
+#country {
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 0 5px hsl(0deg, 0%, 52%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+#country img {
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
+}
+#country #country-body {
+  padding: 1rem;
+}
+#country #country-body h3 {
+  margin-bottom: 0.5rem;
+}
+#country #country-body #country-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 0.25rem;
+}
+#country #country-body #country-info h4 span {
+  font-weight: 300;
+}/*# sourceMappingURL=Country.css.map */

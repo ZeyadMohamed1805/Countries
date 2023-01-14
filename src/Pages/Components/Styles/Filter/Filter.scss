@@ -13,6 +13,7 @@
     }
 
     #search-container {
+        background-color: gold;
         position: relative;
 
         #search {
@@ -29,5 +30,24 @@
 
     #select, option {
         font-weight: $font-weight-medium;
+    }
+}
+
+@media (max-width: 500px) {
+    #filter {
+        @include flex(column, auto, center, 2rem);
+        
+        #search, #select {
+            width: 100%;
+        }
+
+        #search-container {
+            width: 100%;
+
+            i {
+                left: 1rem;
+            }
+        }
+
     }
 }
