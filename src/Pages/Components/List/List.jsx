@@ -5,6 +5,7 @@ import "../Styles/List/List.css";
 
 export const List = () => {
   const [countriesAPI, setCountriesAPI] = useState([]);
+  const [counter, setCounter] = useState(11);
 
   useEffect(() => {
     axios.get("https://restcountries.com/v3.1/all")
@@ -14,8 +15,9 @@ export const List = () => {
   return (
     <div id="list">
         <div id="list-container">
-          {countriesAPI.map(country => (<Country key={countriesAPI.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />))}
+          {countriesAPI.filter(country => countriesAPI.indexOf(country) <= counter).map(country => (<Country key={countriesAPI.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />))}
         </div>
+        <button onClick={() => setCounter(previous => previous + 12)}>Load More</button>
     </div>
   )
 }

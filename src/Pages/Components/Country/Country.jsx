@@ -4,7 +4,7 @@ import "../Styles/Country/Country.css";
 export const Country = (props) => {
   return (
     <div id="country">
-        <img src={`${props.image}`} />
+        <img src={`${props.image}`} alt={props.name} />
         <div id="country-body">
             <h3>{props.name}</h3>
             <div id="country-info">

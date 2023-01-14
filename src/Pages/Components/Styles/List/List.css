@@ -1,8 +1,19 @@
+#list {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: center;
+  gap: 2rem;
+}
 #list #list-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   gap: 4rem;
+}
+#list button {
+  padding: 0.25rem 1rem;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
