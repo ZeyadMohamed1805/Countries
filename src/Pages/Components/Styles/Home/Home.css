@@ -14,4 +14,89 @@
   gap: 2rem;
   width: 90%;
   padding: 2rem 0;
+}
+#home #home-container #filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto;
+}
+#home #home-container #filter #search, #home #home-container #filter #select {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px hsl(0deg, 0%, 52%);
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
+}
+#home #home-container #filter #search-container {
+  position: relative;
+}
+#home #home-container #filter #search-container #search {
+  padding: 0.75rem 5rem 0.75rem 2.5rem;
+}
+#home #home-container #filter #search-container i {
+  color: hsl(0deg, 0%, 52%);
+  position: absolute;
+  left: 5%;
+  top: 33.3333333333%;
+}
+#home #home-container #filter #select, #home #home-container #filter option {
+  font-weight: 600;
+}
+#home #home-container #list #list-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 4rem;
+}
+#home #home-container button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  #home #home-container #list #list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 4rem;
+  }
+}
+@media (max-width: 800px) {
+  #home #home-container #list #list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  #home #home-container #filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: center;
+    gap: 2rem;
+  }
+  #home #home-container #filter #search, #home #home-container #filter #select {
+    width: 100%;
+  }
+  #home #home-container #filter #search-container {
+    width: 100%;
+  }
+  #home #home-container #filter #search-container i {
+    left: 1rem;
+  }
+  #home #home-container #list #list-container {
+    display: grid;
+    grid-template-columns: minmax(200px, 300px);
+    grid-template-rows: auto;
+    gap: 4rem;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=Home.css.map */
