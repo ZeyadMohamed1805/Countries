@@ -5,7 +5,9 @@ import { Country } from "../Components/Country/Country";
 
 export const Home = () => {
   const [countriesAPI, setCountriesAPI] = useState([]);
+  const [search, setSearch] = useState("");
   const [counter, setCounter] = useState(11);
+  console.log(search);
 
   useEffect(() => {
     axios.get("https://restcountries.com/v3.1/all")
@@ -17,7 +19,7 @@ export const Home = () => {
         <div id="home-container">
           <div id="filter">
             <div id="search-container">
-              <input id="search" type="search" placeholder="Search for a country..." />
+              <input id="search" type="search" placeholder="Search for a country..." onChange={(e) => {document.querySelector("#load").style.display = "none"; setCounter(countriesAPI.length);setSearch(e.target.value)}} />
               <i className="fa-solid fa-magnifying-glass"></i>
             </div>
             <select id="select" defaultValue="none">
@@ -31,10 +33,13 @@ export const Home = () => {
           </div>
           <div id="list">
             <div id="list-container">
-              {countriesAPI.filter(country => countriesAPI.indexOf(country) <= counter).map(country => (<Country key={countriesAPI.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />))}
+              {countriesAPI.filter(country => search.toLowerCase() === "" ? country : country.name.common.toLowerCase().includes(search))
+                           .filter(country => countriesAPI.indexOf(country) <= counter)
+                           .map(country => (<Country key={countriesAPI.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />))
+              }
             </div>
           </div>
-          <button onClick={() => setCounter(previous => previous + 12)}>Load More</button>
+          <button id="load" onClick={() => setCounter(previous => previous + 12)}>Load More</button>
         </div>
     </div>
   )
