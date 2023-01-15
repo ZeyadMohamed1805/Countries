@@ -36,7 +36,7 @@ export const Home = () => {
               {countriesAPI.filter(country => category === "none" ? country : country.region === category)
                            .filter(country => search.toLowerCase() === "" ? country : country.name.common.toLowerCase().includes(search))
                            .filter(country => countriesAPI.indexOf(country) <= counter)
-                           .map(country => (<Country key={countriesAPI.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />))
+                           .map(country => (<Country key={countriesAPI.indexOf(country)} id={countriesAPI.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />))
               }
             </div>
           </div>

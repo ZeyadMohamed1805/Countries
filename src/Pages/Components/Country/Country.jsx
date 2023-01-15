@@ -2,8 +2,12 @@ import React from 'react';
 import "../Styles/Country/Country.css";
 
 export const Country = (props) => {
+  const handleRoute = () => {
+    window.location.pathname = `/${props.id}`;
+  }
+
   return (
-    <div id="country">
+    <div id="country" onClick={handleRoute}>
         <img src={`${props.image}`} alt={props.name} />
         <div id="country-body">
             <h3>{props.name}</h3>
