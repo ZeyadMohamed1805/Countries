@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import "../Styles/Nav/Nav.css";
+import "../../Styles/Nav/Nav.css";
 
 export const Nav = () => {
   const [mode, setMode] = useState("Dark");

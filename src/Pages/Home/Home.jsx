@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import "../Components/Styles/Home/Home.css";
+import "../Styles/Home/Home.css";
 import { Country } from "../Components/Country/Country";
 
 export const Home = () => {
