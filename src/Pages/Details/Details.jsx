@@ -5,32 +5,46 @@ import "../Styles/Details/Details.css";
 export const Details = () => {
   const APIData = useContext(APIContext);
   const index = Number(window.location.pathname.slice(1, window.location.pathname.length));
-  console.log(APIData);
 
   const lengthCheck = () => {
     if (APIData.length !== 0) {
+      const nativeNameObject = APIData[index].name.nativeName;
+      const currenciesObject = APIData[index].currencies;
+      const languagesObject = APIData[index].languages;
+      const image = APIData[index].flags.png;
+      const name = APIData[index].name.common;
+      const nativeName = Object.values(nativeNameObject)[0].common;
+      const population = APIData[index].population;
+      const region = APIData[index].region;
+      const subregion = APIData[index].subregion;
+      const capital = APIData[index].capital[0];
+      const topLevelDomain = APIData[index].tld[0];
+      const currencies = Object.values(currenciesObject)[0].name;
+      const languages = Object.values(languagesObject).join(", ");
+      const borders = APIData[index].borders;
+
       return (
         <div id="details-content">
-          <img src={APIData[index].flags.png} alt={APIData[index].name.common} />
+          <img src={image} alt={name} />
           <div id="details-info">
-            <h1>{APIData[index].name.common}</h1>
+            <h1>{name}</h1>
             <div id="details-flex">
               <div id="details-left">
-                <h3>Native Name: {APIData[index].name.nativeName.deu.common}</h3> {/* */}
-                <h3>Population: <span>{APIData[index].population}</span></h3>
-                <h3>Region: <span>{APIData[index].region}</span></h3>
-                <h3>Sub Region: <span>{APIData[index].subregion}</span></h3>
-                <h3>Captial: <span>{APIData[index].captial}</span></h3> {/* */}
+                <h3>Native Name: {nativeName}</h3>
+                <h3>Population: <span>{population}</span></h3>
+                <h3>Region: <span>{region}</span></h3>
+                <h3>Sub Region: <span>{subregion}</span></h3>
+                <h3>Captial: <span>{capital}</span></h3>
               </div>
               <div id="details-right">
-              <h3>Top Level Domain: <span>{APIData[index].tld[0]}</span></h3> {/* */}
-              <h3>Currencies: <span>{APIData[index].currencies.XCD}</span></h3> {/* */}
-              {/* <h3>Languages: {APIData[index].languages.map(language => (<span>{language}</span>))}</h3> */} {/* */}
+              <h3>Top Level Domain: <span>{topLevelDomain}</span></h3>
+              <h3>Currencies: <span>{currencies}</span></h3>
+              <h3>Languages: <span>{languages}</span></h3>
               </div>
             </div>
             <div id="details-border">
               <h3>Border Countries: </h3>
-              {/* {APIData[index].map(border => <button>{border}</button>)} */} {/* */}
+              {borders.map(border => <button key={borders.indexOf(border)}>{border}</button>)}
             </div>
           </div>
         </div>
