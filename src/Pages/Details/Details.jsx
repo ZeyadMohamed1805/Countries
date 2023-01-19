@@ -46,10 +46,13 @@ export const Details = () => {
               <h3>Languages: <span>{languages}</span></h3>
               </div>
             </div>
-            <div id="details-border">
-              <h3>Border Countries: </h3>
-              <div id="details-button">{borders.map(border => <button key={borders.indexOf(border)}>{border}</button>)}</div>
-            </div>
+              { Object.values(APIData[index]).includes(borders) ?
+                  <div id="details-border">
+                    <h3>Border Countries: </h3>
+                    <div id="details-button">{borders.map(border => <button key={borders.indexOf(border)}>{border}</button>)}</div>
+                  </div>
+                : null
+              }
           </div>
         </div>
       )

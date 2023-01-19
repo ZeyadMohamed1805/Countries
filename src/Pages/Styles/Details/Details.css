@@ -79,6 +79,7 @@
   justify-content: auto;
   align-items: auto;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 #details #details-container #details-content #details-border #details-button button {
   padding: 0.25rem 1rem;
