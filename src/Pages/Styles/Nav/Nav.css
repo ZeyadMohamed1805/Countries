@@ -1,10 +1,21 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(0, 0%, 98%);
+  --dark-grey: hsl(0, 0%, 52%);
+  --light-blue: hsl(209, 23%, 22%);
+  --blue: hsl(207, 26%, 17%);
+  --dark-blue: hsl(200, 15%, 8%);
+}
+
 #nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: auto;
-  box-shadow: 0 0 5px hsl(0deg, 0%, 52%);
+  background-color: var(--white);
+  color: var(--dark-blue);
+  box-shadow: 0 0 5px var(--dark-grey);
 }
 #nav #nav-container {
   display: flex;
@@ -17,6 +28,7 @@
 }
 #nav #nav-container button {
   background-color: transparent;
+  color: var(--dark-blue);
   border: none;
   font-weight: 600;
   cursor: pointer;

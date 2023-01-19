@@ -2,8 +2,9 @@
 @import "../Mixins/Mixins";
 
 #country {
-    background-color: $white;
-    box-shadow: 0 0 5px $dark-grey;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    box-shadow: 0 0 5px var(--dark-grey);
     border-radius: 5px;
     cursor: pointer;
 

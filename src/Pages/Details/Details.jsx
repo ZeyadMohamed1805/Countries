@@ -1,13 +1,15 @@
 import React, {useContext} from 'react';
+import { useNavigate } from 'react-router';
 import { APIContext } from "../../App";
 import "../Styles/Details/Details.css";
 
 export const Details = () => {
   const APIData = useContext(APIContext);
   const index = Number(window.location.pathname.slice(1, window.location.pathname.length));
+  const navigate = useNavigate();
 
-  const handleClick = () => {
-    window.location.pathname = "/";
+  const handleRoute = () => {
+    navigate(`/`);
   }
 
   const lengthCheck = () => {
@@ -62,7 +64,7 @@ export const Details = () => {
   return (
     <div id="details">
       <div id="details-container">
-        <button id="back-button" onClick={handleClick}><i className="fa-solid fa-arrow-left"></i> Back</button>
+        <button id="back-button" onClick={handleRoute}><i className="fa-solid fa-arrow-left"></i> Back</button>
         {lengthCheck()}
       </div>
     </div>

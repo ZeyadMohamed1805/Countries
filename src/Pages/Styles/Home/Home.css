@@ -1,10 +1,19 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(0, 0%, 98%);
+  --dark-grey: hsl(0, 0%, 52%);
+  --light-blue: hsl(209, 23%, 22%);
+  --blue: hsl(207, 26%, 17%);
+  --dark-blue: hsl(200, 15%, 8%);
+}
+
 #home {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: auto;
-  background-color: hsl(0deg, 0%, 98%);
+  background-color: var(--light-grey);
 }
 #home #home-container {
   display: flex;
@@ -23,10 +32,12 @@
   gap: auto;
 }
 #home #home-container #filter #search, #home #home-container #filter #select {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  box-shadow: 0 0 5px var(--dark-grey);
   border: none;
   outline: none;
   border-radius: 5px;
-  box-shadow: 0 0 5px hsl(0deg, 0%, 52%);
   padding: 0.75rem 1rem 0.75rem 0.75rem;
 }
 #home #home-container #filter #search-container {
@@ -35,8 +46,17 @@
 #home #home-container #filter #search-container #search {
   padding: 0.75rem 5rem 0.75rem 2.5rem;
 }
+#home #home-container #filter #search-container #search::-moz-placeholder {
+  color: var(--dark-blue);
+}
+#home #home-container #filter #search-container #search:-ms-input-placeholder {
+  color: var(--dark-blue);
+}
+#home #home-container #filter #search-container #search::placeholder {
+  color: var(--dark-blue);
+}
 #home #home-container #filter #search-container i {
-  color: hsl(0deg, 0%, 52%);
+  color: var(--dark-blue);
   position: absolute;
   left: 5%;
   top: 33.3333333333%;
@@ -51,6 +71,11 @@
   gap: 4rem;
 }
 #home #home-container button {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  box-shadow: 0 0 5px var(--dark-grey);
+  border: none;
+  border-radius: 5px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

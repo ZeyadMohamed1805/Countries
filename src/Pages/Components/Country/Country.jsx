@@ -1,10 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import "../../Styles/Country/Country.css";
 
 export const Country = (props) => {
+  const navigate = useNavigate();
+  
   const handleRoute = () => {
-    window.location.pathname = `/${props.id}`;
+    navigate(`/${props.id}`);
   }
+  
   return (
     <div id="country" onClick={handleRoute}>
         <img src={`${props.image}`} alt={props.name} />

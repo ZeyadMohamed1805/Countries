@@ -3,6 +3,7 @@
 
 #details {
     @include flex(auto, center, center, auto);
+    background-color: var(--light-grey);
 
     #details-container {
         @include flex(column, auto, auto, 5rem);
@@ -12,6 +13,8 @@
         #back-button {
             @include flex(row, center, center, 0.5rem);
             width: fit-content;
+            background-color: var(--white);
+            color: var(--dark-blue);
             cursor: pointer;
             border: none;
             border-radius: 5px;
@@ -21,6 +24,7 @@
 
         #details-content {
             @include flex(row, center, center, 5rem);
+            color: var(--dark-blue);
             
             img, #details-info {
                 width: 50%;
@@ -28,6 +32,8 @@
 
             img {
                 height: 25rem;
+                box-shadow: 0 0 5px var(--dark-grey);
+                border-radius: 5px;
             }
             
             #details-info {
@@ -47,14 +53,17 @@
             }
 
             #details-border {
-                @include flex(row, auto, auto, 0.5rem);
+                @include flex(row, auto, auto, 1rem);
                 #details-button {
-                    @include flex(row, auto, auto, 0.5rem);
+                    @include flex(row, auto, auto, 1rem);
                     flex-wrap: wrap;
 
                     button {
+                        background-color: var(--white);
+                        color: var(--dark-blue);
+                        box-shadow: 0 0 5px var(--dark-grey);
+                        border: none;
                         padding: 0.25rem 1rem;
-                        cursor: pointer;
                     }
                 }
             }
