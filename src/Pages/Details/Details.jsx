@@ -48,7 +48,7 @@ export const Details = () => {
             </div>
             <div id="details-border">
               <h3>Border Countries: </h3>
-              {borders.map(border => <button key={borders.indexOf(border)}>{border}</button>)}
+              <div id="details-button">{borders.map(border => <button key={borders.indexOf(border)}>{border}</button>)}</div>
             </div>
           </div>
         </div>

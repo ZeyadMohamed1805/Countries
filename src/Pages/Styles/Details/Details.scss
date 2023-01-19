@@ -2,12 +2,12 @@
 @import "../Mixins/Mixins";
 
 #details {
-    @include flex(auto, center, auto, auto);
+    @include flex(auto, center, center, auto);
 
     #details-container {
-        @include flex(column, auto, auto, 2rem);
+        @include flex(column, auto, auto, 5rem);
         width: 90%;
-        padding: 2rem 0;
+        padding: 5rem 0;
 
         #back-button {
             @include flex(row, center, center, 0.5rem);
@@ -21,7 +21,6 @@
 
         #details-content {
             @include flex(row, center, center, 5rem);
-            min-height: calc(100vh - 15rem);
             
             img, #details-info {
                 width: 50%;
@@ -37,6 +36,10 @@
                 #details-flex {
                     @include flex(row, space-between, auto, auto);
 
+                    #details-left, #details-right {
+                        @include flex(column, auto, auto, 1rem);
+                    }
+
                     span {
                         font-weight: $font-weight-light;
                     }
@@ -44,11 +47,53 @@
             }
 
             #details-border {
-                @include flex(row, auto, center, 0.5rem);
+                @include flex(row, auto, auto, 0.5rem);
+                #details-button {
+                    @include flex(row, auto, auto, 0.5rem);
 
-                button {
-                    padding: 0.25rem 1rem;
-                    cursor: pointer;
+                    button {
+                        padding: 0.25rem 1rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #details {
+        #details-container {
+            @include flex(column, auto, auto, 5rem);
+
+            #details-content {
+                @include flex(column, auto, center, 5rem);
+
+                img, #details-info {
+                    width: 100%;
+                }
+
+                #details-info {
+                    #details-flex {
+                        @include flex(column, auto, auto, 2rem);
+                    }   
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #details {
+        #details-container {
+            #details-content {
+                img {
+                    height: auto;
+                }
+                #details-info {
+                    #details-border {
+                        @include flex (column, auto, auto, 1rem);
+                    }
                 }
             }
         }

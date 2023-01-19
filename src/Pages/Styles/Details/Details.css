@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: auto;
   justify-content: center;
-  align-items: auto;
+  align-items: center;
   gap: auto;
 }
 #details #details-container {
@@ -10,9 +10,9 @@
   flex-direction: column;
   justify-content: auto;
   align-items: auto;
-  gap: 2rem;
+  gap: 5rem;
   width: 90%;
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 #details #details-container #back-button {
   display: flex;
@@ -35,7 +35,6 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  min-height: calc(100vh - 15rem);
 }
 #details #details-container #details-content img, #details #details-container #details-content #details-info {
   width: 50%;
@@ -57,6 +56,13 @@
   align-items: auto;
   gap: auto;
 }
+#details #details-container #details-content #details-info #details-flex #details-left, #details #details-container #details-content #details-info #details-flex #details-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 1rem;
+}
 #details #details-container #details-content #details-info #details-flex span {
   font-weight: 300;
 }
@@ -64,10 +70,56 @@
   display: flex;
   flex-direction: row;
   justify-content: auto;
-  align-items: center;
+  align-items: auto;
   gap: 0.5rem;
 }
-#details #details-container #details-content #details-border button {
+#details #details-container #details-content #details-border #details-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: auto;
+  align-items: auto;
+  gap: 0.5rem;
+}
+#details #details-container #details-content #details-border #details-button button {
   padding: 0.25rem 1rem;
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  #details #details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: auto;
+    gap: 5rem;
+  }
+  #details #details-container #details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: center;
+    gap: 5rem;
+  }
+  #details #details-container #details-content img, #details #details-container #details-content #details-info {
+    width: 100%;
+  }
+  #details #details-container #details-content #details-info #details-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: auto;
+    gap: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  #details #details-container #details-content img {
+    height: auto;
+  }
+  #details #details-container #details-content #details-info #details-border {
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: auto;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=Details.css.map */
