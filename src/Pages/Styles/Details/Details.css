@@ -1,1 +1,73 @@
-/*# sourceMappingURL=Details.css.map */
+#details {
+  display: flex;
+  flex-direction: auto;
+  justify-content: center;
+  align-items: auto;
+  gap: auto;
+}
+#details #details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 2rem;
+  width: 90%;
+  padding: 2rem 0;
+}
+#details #details-container #back-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px;
+  padding: 0.5rem 2rem;
+}
+#details #details-container #details-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  min-height: calc(100vh - 15rem);
+}
+#details #details-container #details-content img, #details #details-container #details-content #details-info {
+  width: 50%;
+}
+#details #details-container #details-content img {
+  height: 25rem;
+}
+#details #details-container #details-content #details-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 2rem;
+}
+#details #details-container #details-content #details-info #details-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: auto;
+  gap: auto;
+}
+#details #details-container #details-content #details-info #details-flex span {
+  font-weight: 300;
+}
+#details #details-container #details-content #details-border {
+  display: flex;
+  flex-direction: row;
+  justify-content: auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+#details #details-container #details-content #details-border button {
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+}/*# sourceMappingURL=Details.css.map */

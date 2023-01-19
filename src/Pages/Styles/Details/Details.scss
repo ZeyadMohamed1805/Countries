@@ -1,2 +1,56 @@
 @import "../Variables/Variables";
 @import "../Mixins/Mixins";
+
+#details {
+    @include flex(auto, center, auto, auto);
+
+    #details-container {
+        @include flex(column, auto, auto, 2rem);
+        width: 90%;
+        padding: 2rem 0;
+
+        #back-button {
+            @include flex(row, center, center, 0.5rem);
+            width: fit-content;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px;
+            padding: 0.5rem 2rem;
+        }
+
+        #details-content {
+            @include flex(row, center, center, 5rem);
+            min-height: calc(100vh - 15rem);
+            
+            img, #details-info {
+                width: 50%;
+            }
+
+            img {
+                height: 25rem;
+            }
+            
+            #details-info {
+                @include flex(column, auto, auto, 2rem);
+
+                #details-flex {
+                    @include flex(row, space-between, auto, auto);
+
+                    span {
+                        font-weight: $font-weight-light;
+                    }
+                }
+            }
+
+            #details-border {
+                @include flex(row, auto, center, 0.5rem);
+
+                button {
+                    padding: 0.25rem 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

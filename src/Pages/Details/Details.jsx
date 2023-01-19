@@ -6,6 +6,10 @@ export const Details = () => {
   const APIData = useContext(APIContext);
   const index = Number(window.location.pathname.slice(1, window.location.pathname.length));
 
+  const handleClick = () => {
+    window.location.pathname = "/";
+  }
+
   const lengthCheck = () => {
     if (APIData.length !== 0) {
       const nativeNameObject = APIData[index].name.nativeName;
@@ -30,7 +34,7 @@ export const Details = () => {
             <h1>{name}</h1>
             <div id="details-flex">
               <div id="details-left">
-                <h3>Native Name: {nativeName}</h3>
+                <h3>Native Name: <span>{nativeName}</span></h3>
                 <h3>Population: <span>{population}</span></h3>
                 <h3>Region: <span>{region}</span></h3>
                 <h3>Sub Region: <span>{subregion}</span></h3>
@@ -55,7 +59,7 @@ export const Details = () => {
   return (
     <div id="details">
       <div id="details-container">
-        <button><i className="fa-solid fa-arrow-left"></i> Back</button>
+        <button id="back-button" onClick={handleClick}><i className="fa-solid fa-arrow-left"></i> Back</button>
         {lengthCheck()}
       </div>
     </div>
