@@ -5,7 +5,7 @@ import "../Styles/Details/Details.css";
 
 export const Details = () => {
   const APIData = useContext(APIContext);
-  const index = Number(window.location.pathname.slice(1, window.location.pathname.length));
+  const index = Number(window.location.hash.slice(2, window.location.hash.length));
   const navigate = useNavigate();
 
   const handleRoute = () => {

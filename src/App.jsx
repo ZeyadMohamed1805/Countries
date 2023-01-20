@@ -1,9 +1,10 @@
 import "./Pages/Styles/App/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Nav } from "./Pages/Components/Nav/Nav";
 import { Home } from "./Pages/Home/Home";
 import { Details } from "./Pages/Details/Details";
 import { createContext, useEffect, useState } from "react";
+import { HashRouter } from "react-router-dom";
 import axios from "axios";
 
 export const APIContext = createContext();
@@ -17,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <APIContext.Provider value={APIData}>
       <div className="App">
         <Nav />
@@ -27,7 +28,7 @@ function App() {
         </Routes>
       </div>
       </APIContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
