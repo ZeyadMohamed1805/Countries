@@ -14,7 +14,7 @@ export const Home = () => {
         <div id="home-container">
           <div id="filter">
             <div id="search-container">
-              <input id="search" type="search" placeholder="Search for a country..." onChange={(e) => {document.querySelector("#load").style.display = "none"; setCounter(APIData.length); setSearch(e.target.value)}} />
+              <input id="search" type="text" placeholder="Search for a country..." onChange={(e) => {document.querySelector("#load").style.display = "none"; setCounter(APIData.length); setSearch(e.target.value)}} />
               <i className="fa-solid fa-magnifying-glass"></i>
             </div>
             <select id="select" defaultValue="none" onChange={(e) => {document.querySelector("#load").style.display = "none"; setCounter(APIData.length); setCategory(e.target.value)}}>
