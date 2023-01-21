@@ -18,6 +18,7 @@ export const Home = () => {
             </div>
             <select id="select" defaultValue="none" onChange={(e) => {setCategory(e.target.value)}}>
               <option value="none" disabled hidden>Filter by Region</option>
+              <option value="All" >All</option>
               <option value="Africa" >Africa</option>
               <option value="Americas" >Americas</option>
               <option value="Asia" >Asia</option>
@@ -27,7 +28,7 @@ export const Home = () => {
           </div>
           <div id="list">
             <div id="list-container">
-              {APIData.filter(country => category === "none" ? country : country.region === category)
+              {APIData.filter(country => category === "none" || category === "All" ? country : country.region === category)
                            .filter(country => search.toLowerCase() === "" ? country : country.name.common.toLowerCase().includes(search))
                            .map(country => (<Country key={APIData.indexOf(country)} id={APIData.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />))
               }
