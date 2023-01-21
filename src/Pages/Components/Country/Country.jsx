@@ -15,7 +15,7 @@ export const Country = (props) => {
         <div id="country-body">
             <h3>{props.name}</h3>
             <div id="country-info">
-                <h4>Population: <span>{props.population}</span></h4>
+                <h4>Population: <span>{props.population.toLocaleString()}</span></h4>
                 <h4>Region: <span>{props.region}</span></h4>
                 <h4>Capital: <span>{props.capital}</span></h4>
             </div>
