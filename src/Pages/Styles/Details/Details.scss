@@ -4,6 +4,7 @@
 #details {
     @include flex(auto, center, center, auto);
     background-color: var(--light-grey);
+    transition-duration: 0.25s;
 
     #details-container {
         @include flex(column, auto, auto, 5rem);
