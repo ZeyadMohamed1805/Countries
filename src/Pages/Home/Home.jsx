@@ -4,7 +4,7 @@ import { Country } from "../Components/Country/Country";
 import { APIContext } from '../../App';
 
 export const Home = () => {
-  const APIData = useContext(APIContext).filter(country => country.region !== "Antarctic");
+  const APIData = useContext(APIContext);
   const [search, setSearch] = useState("");
   const [counter, setCounter] = useState(11);
   const [category, setCategory] = useState("none");
