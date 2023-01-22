@@ -14,20 +14,20 @@ export const Details = () => {
 
   const lengthCheck = () => {
     if (APIData.length !== 0) {
-      const nativeNameObject = APIData[index].name.nativeName;
-      const currenciesObject = APIData[index].currencies;
-      const languagesObject = APIData[index].languages;
-      const image = APIData[index].flags.png;
-      const name = APIData[index].name.common;
-      const nativeName = Object.values(nativeNameObject)[0].common;
-      const population = APIData[index].population;
-      const region = APIData[index].region;
-      const subregion = APIData[index].subregion;
-      const capital = APIData[index].capital[0];
-      const topLevelDomain = APIData[index].tld[0];
-      const currencies = Object.values(currenciesObject)[0].name;
-      const languages = Object.values(languagesObject).join(", ");
-      const borders = APIData[index].borders;
+      const nativeNameObject = Object.keys(APIData[index].name).includes("nativeName") ? APIData[index].name.nativeName : null;
+      const currenciesObject = Object.keys(APIData[index]).includes("currencies") ? APIData[index].currencies : null;
+      const languagesObject = Object.keys(APIData[index]).includes("languages") ? APIData[index].languages : null;
+      const image = Object.keys(APIData[index]).includes("flags") ? APIData[index].flags.png : "No Image";
+      const name = Object.keys(APIData[index]).includes("name") ? APIData[index].name.common : "No Name";
+      const nativeName = Object.keys(APIData[index].name).includes("nativeName") ? Object.values(nativeNameObject)[0].common : "No Native Name";
+      const population = Object.keys(APIData[index]).includes("population") ? APIData[index].population : "No Population";
+      const region = Object.keys(APIData[index]).includes("region") ? APIData[index].region : "No Region";
+      const subregion = Object.keys(APIData[index]).includes("subregion") ? APIData[index].subregion : "No Subregion";
+      const capital = Object.keys(APIData[index]).includes("capital") ? APIData[index].capital[0] : "No Capital";
+      const topLevelDomain = Object.keys(APIData[index]).includes("tld") ? APIData[index].tld[0] : "No Top Level Domain";
+      const currencies = Object.keys(APIData[index]).includes("currencies") ? Object.values(currenciesObject)[0].name : "No Currencies";
+      const languages = Object.keys(APIData[index]).includes("languages") ? Object.values(languagesObject).join(", ") : "No Languages";
+      const borders = Object.keys(APIData[index]).includes("borders") ? APIData[index].borders : "No Borders";
 
       return (
         <div id="details-content">

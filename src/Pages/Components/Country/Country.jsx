@@ -9,7 +9,7 @@ export const Country = (props) => {
     navigate(`/${props.id}`);
   }
   
- return props.region !== "Antarctic" && (
+ return (
     <div id="country" onClick={handleRoute}>
         <img src={`${props.image}`} alt={props.name} />
         <div id="country-body">
