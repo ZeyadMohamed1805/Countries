@@ -31,7 +31,7 @@ export const Home = () => {
             <div id="list-container">
               {APIData.filter(country => category === "none" || category === "All" ? country : country.region === category)
                            .filter(country => search.toLowerCase() === "" ? country : country.name.common.toLowerCase().includes(search))
-                           .map(country => (<Country key={APIData.indexOf(country)} id={APIData.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={Object.keys(country).includes("capital") ? country.capital : "No Capital"} />))
+                           .map(country => APIData.indexOf(country) !== 218 && (<Country key={APIData.indexOf(country)} id={APIData.indexOf(country)} image={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={Object.keys(country).includes("capital") ? country.capital : "No Capital"} />))
               }
             </div>
           </div>
