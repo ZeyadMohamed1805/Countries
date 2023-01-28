@@ -20,7 +20,7 @@ export const Details = () => {
       const image = Object.keys(APIData[index]).includes("flags") ? APIData[index].flags.png : "No Image";
       const name = Object.keys(APIData[index]).includes("name") ? APIData[index].name.common : "No Name";
       const nativeName = Object.keys(APIData[index].name).includes("nativeName") ? Object.values(nativeNameObject)[0].common : "No Native Name";
-      const population = Object.keys(APIData[index]).includes("population") ? APIData[index].population : "No Population";
+      const population = Object.keys(APIData[index]).includes("population") ? APIData[index].population.toLocaleString() : "No Population";
       const region = Object.keys(APIData[index]).includes("region") ? APIData[index].region : "No Region";
       const subregion = Object.keys(APIData[index]).includes("subregion") ? APIData[index].subregion : "No Subregion";
       const capital = Object.keys(APIData[index]).includes("capital") ? APIData[index].capital[0] : "No Capital";
